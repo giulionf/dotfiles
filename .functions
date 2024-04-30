@@ -1,0 +1,24 @@
+# Reduce screen recording file size
+video_reduce() {
+    ffmpeg -i "$1" -vcodec libx264 -r 24 -crf 28 "${1%.*}-reduced.mp4"
+}
+
+# Reduce screen recording file size of all videos in directory
+video_reduce_all() {
+    for i in *;
+	do name=`echo "$i" | cut -d'.' -f1`
+  	echo "$name"
+  	video_reduce "$i"
+    done
+}
+
+# Speedup video. E.g. video_speedup 8 demo.mov
+video_speedup() {
+    ffmpeg -i "$2" -pix_fmt yuv420p -vcodec libx264 -filter_complex "[0:v]setpts=PTS/$1[v]" -map "[v]" -an "${2%.*}-x$1.mp4"
+}
+
+# Create a new directory and enter it
+function mkd() {
+	mkdir -p "$@" && cd "$_";
+}
+

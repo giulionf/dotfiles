@@ -1,0 +1,76 @@
+[alias]
+	s = status -sb
+	staged = diff --cached
+	lg = log --all --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%Creset :%C(yellow)%d%Creset %s %Cgreen(%cr) %Creset' --abbrev-commit
+	sha = rev-parse HEAD
+	ssha = rev-parse --short HEAD
+	pushfwl = push --force-with-lease
+	remove-orphans = "!git fetch -p && for branch in $(git branch -vv | grep ': gone]' | awk '{print $1}'); do git branch -D $branch; done"
+	changes = log --follow -p --
+[core]
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+	autocrlf = input
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[color "diff"]
+	old = red bold
+	new = green bold
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	whitespace = red reverse
+	func = 146 bold
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[url "git@github.com:"]
+	insteadOf = "gh:"
+	insteadOf = "git://github.com/"
+	#insteadOf = "https://github.com/"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
+	#pushInsteadOf = "https://github.com/"
+[url "git@gist.github.com:"]
+	insteadOf = "gst:"
+	pushInsteadOf = "gist:"
+	pushInsteadOf = "git://gist.github.com/"
+	pushInsteadOf = "https://gist.github.com/"
+[help]
+	autocorrect = 1
+[push]
+	default = current # http://stackoverflow.com/a/23918418/89484
+[user]
+	email = giulio.nf@googlemail.com
+	name = Giulio Neusch-Frediani
+	signingkey = 761E70A00788B2B1
+; [merge]
+; 	conflictStyle = diff3
+[commit]
+	gpgsign = False
+[color]
+	ui = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = false
+	ff = only
+[stash]
+	showPatch = true
+[log]
+	decorate = full
+[init]
+	defaultBranch = main
+[interactive]
+#	diffFilter = diff-so-fancy --patch
+	diffFilter = less
+[diff-so-fancy]
+	changeHunkIndicators = true
+[diff-so-fancy]
+	changeHunkIndicators = true
+; [add.interactive]
+	; useBuiltin = false

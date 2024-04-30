@@ -7,12 +7,19 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Plugins
+# Enable installed plugins
 plugins=(
     git
+    dirhistory
     zsh-autosuggestions
     z
+    copybuffer
+    copyfile
+    history
+    zsh-ask
 )
-source $ZSH/oh-my-zsh.sh
 
- 
+source $ZSH/oh-my-zsh.sh
+source ~/.functions
+source ~/.aliases
+source ~/.env

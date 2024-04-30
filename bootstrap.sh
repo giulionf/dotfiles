@@ -11,6 +11,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 zsh ~/.fzf/install
 
+# Install zsh ask
+rm -rf ${~/.oh-my-zsh/custom}/plugins/zsh-ask
+git clone --depth 1 https://github.com/Licheam/zsh-ask.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-ask
+
 # Install powerlevel 10k Theme
 rm -rf ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -18,6 +22,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~
 # Sync everything to home dir + activate.
 rsync --exclude ".git/" \
     --exclude "bootstrap.sh" \
+    --exclude "brew.sh" \
+    --exclude ".Brewfile" \
     --exclude "README.md" \
     --exclude ".gitignore" \
     --exclude "bin" \
