@@ -9,7 +9,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # Install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-zsh ~/.fzf/install
+~/.fzf/install --no-bash --no-fish --key-bindings --completion --update-rc
 
 # Install zsh ask
 rm -rf ${~/.oh-my-zsh/custom}/plugins/zsh-ask
