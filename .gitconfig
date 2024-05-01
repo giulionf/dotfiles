@@ -11,7 +11,6 @@
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 	autocrlf = input
-	pager = diff-so-fancy | less --tabs=4 -RFX
 [color "diff"]
 	old = red bold
 	new = green bold
@@ -66,11 +65,6 @@
 [init]
 	defaultBranch = main
 [interactive]
-#	diffFilter = diff-so-fancy --patch
 	diffFilter = less
-[diff-so-fancy]
-	changeHunkIndicators = true
-[diff-so-fancy]
-	changeHunkIndicators = true
 ; [add.interactive]
 	; useBuiltin = false
