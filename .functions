@@ -21,16 +21,3 @@ video_speedup() {
 function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
-
-# Install shell environment on a remote host
-function shellymcshellface() {
-    REPOSRC=git@github.com:giulionf/dotfiles.git
-    LOCALREPO=~/dotfiles
-    git clone "$REPOSRC" "$LOCALREPO" 2> /dev/null || git -C "$LOCALREPO" pull --rebase
-    zsh ~/dotfiles/bootstrap.sh;
-}
-
-function shellymshellface_remote() {
-    ssh $1 "$(typeset -f shellymcshellface); shellymcshellface"
-}
-
