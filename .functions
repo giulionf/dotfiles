@@ -22,10 +22,23 @@ function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
 
+# Print the github clone command for these dotfiles
 function shellymcshellface() {
     echo "git clone git@github.com:giulionf/dotfiles.git"
 }
 
+# Write new stuff to ~/.custom. Remember to use '' around
+# the parameters
 customadd() {
-    echo "$1 >> ~/.custom"
+    if [ "$#" -gt 1 ]; then
+        echo "There are more than one parameter. You need to use '' around your input"
+    else
+        echo $1 >> ~/.custom
+    fi
+    source ~/.custom
+}
+
+customremovelast() {
+    head -n $(($(wc -l < .custom) - 1)) ~/.custom > ~/tmpfile && mv ~/tmpfile ~/.custom
+    zsh
 }

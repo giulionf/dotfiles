@@ -19,6 +19,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~
 yes | cp -rf .aliases ~/.aliases
 yes | cp -rf .env ~/.env
 yes | cp -rf .custom ~/.custom
+yes | cp -rf .macos ~/.macos
 yes | cp -rf .functions ~/.functions
 yes | cp -rf .gitconfig ~/.gitconfig
 yes | cp -rf .p10k.zsh ~/.p10k.zsh
