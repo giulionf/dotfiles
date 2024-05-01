@@ -1,11 +1,10 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-# Add SSH Agent on localhost
-if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-  # Running on remote
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # Running on MacOS
+  source ~/.macos
 else
-  # Running locally
-  ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+  # Add non-macos stuff here.
 fi
 
 # Powerlevel 10k custom theme

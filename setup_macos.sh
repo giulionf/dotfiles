@@ -26,6 +26,15 @@
 # Ask for the administrator password upfront
 sudo -v
 
+# Install brew + packages from brewfile
+if ! command -v brew &> /dev/null; then
+	echo "Homebrew is not installed. Installing..."
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+    echo "Homebrew is already installed."
+fi
+brew bundle --file=.Brewfile
+
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
