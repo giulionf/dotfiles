@@ -21,3 +21,7 @@ video_speedup() {
 function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
+
+function shellymcshellface() {
+    echo "git clone git@github.com:giulionf/dotfiles.git"
+}
