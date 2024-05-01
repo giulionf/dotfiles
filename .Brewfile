@@ -33,3 +33,4 @@ brew 'gh'
 cask 'macpass'
 brew 'cmake'
 brew 'clang-format'
+cask "rectnagle"
