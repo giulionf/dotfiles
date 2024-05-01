@@ -1,5 +1,13 @@
 export ZSH="$HOME/.oh-my-zsh"
 
+# Add SSH Agent on localhost
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+  # Running on remote
+else
+  # Running locally
+  ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+fi
+
 # Powerlevel 10k custom theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -23,13 +31,5 @@ plugins=(
 source ~/.functions
 source ~/.aliases
 source ~/.env
-
-if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-  # Running on remote
-else
-  # Running locally
-  ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-fi
-
 
 source $ZSH/oh-my-zsh.sh
