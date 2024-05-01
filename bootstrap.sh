@@ -7,10 +7,6 @@ sleep 1
 rm -rf ${~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-# Install fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install --no-bash --no-fish --key-bindings --completion --update-rc
-
 # Install zsh ask
 rm -rf ${~/.oh-my-zsh/custom}/plugins/zsh-ask
 git clone --depth 1 https://github.com/Licheam/zsh-ask.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-ask
@@ -28,4 +24,10 @@ rsync --exclude ".git/" \
     --exclude ".gitignore" \
     --exclude "bin" \
     -avh --no-perms . ~;
+
+# Install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --no-bash --no-fish --key-bindings --completion --update-rc
+eval "$(fzf --zsh)"
+
 source ~/.zshrc;
