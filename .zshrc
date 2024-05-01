@@ -19,7 +19,17 @@ plugins=(
     zsh-ask
 )
 
-source $ZSH/oh-my-zsh.sh
+# Some collection dotfiles
 source ~/.functions
 source ~/.aliases
 source ~/.env
+
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+  # Running on remote
+else
+  # Running locally
+  ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+fi
+
+
+source $ZSH/oh-my-zsh.sh

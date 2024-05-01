@@ -22,3 +22,15 @@ function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
 
+# Install shell environment on a remote host
+function shellymcshellface() {
+    rm -rf ~/dotfiles;
+    git clone git@github.com:giulionf/dotfiles.git ~/dotfiles;
+    cd ~/test;
+    zsh ~/test/bootstrap.sh;
+}
+
+function shellymshellface_remote() {
+    ssh $1 "$(typeset -f shellymcshellface); shellymcshellface"
+}
+
