@@ -5,7 +5,6 @@ brew 'git-lfs'
 # utils
 brew 'ffmpeg'
 brew 'htop'
-brew 'rar'
 brew 'ncdu'
 brew 'thefuck'
 brew 'wget'
@@ -18,8 +17,6 @@ brew 'fswatch'
 brew 'vim'
 brew 'tmux'
 brew 'universal-ctags'
-brew 'rust'
-brew 'monitorcontrol'
 
 tap 'koekeishiya/formulae'
 # brew 'yabai'
@@ -32,4 +29,4 @@ brew 'gh'
 cask 'macpass'
 brew 'cmake'
 brew 'clang-format'
-cask "rectnagle"
+cask "rectangle"
