@@ -15,6 +15,14 @@ git clone --depth 1 https://github.com/Licheam/zsh-ask.git ${ZSH_CUSTOM:-~/.oh-m
 rm -rf ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
+# Install zsh syntax highlighting
+rm -rf ${~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# Install zsh syntax highlighting
+rm -rf ${~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 # Copy dotfiles to home dir + activate.
 yes | cp -rf .aliases ~/.aliases
 yes | cp -rf .env ~/.env

@@ -24,6 +24,7 @@ plugins=(
     copyfile
     history
     zsh-ask
+    zsh-syntax-highlighting
 )
 
 # Some collection dotfiles
