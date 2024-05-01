@@ -24,10 +24,10 @@ function mkd() {
 
 # Install shell environment on a remote host
 function shellymcshellface() {
-    rm -rf ~/dotfiles;
-    git clone git@github.com:giulionf/dotfiles.git ~/dotfiles;
-    cd ~/test;
-    zsh ~/test/bootstrap.sh;
+    REPOSRC=git@github.com:giulionf/dotfiles.git
+    LOCALREPO=~/dotfiles
+    git clone "$REPOSRC" "$LOCALREPO" 2> /dev/null || git -C "$LOCALREPO" pull --rebase
+    zsh ~/dotfiles/bootstrap.sh;
 }
 
 function shellymshellface_remote() {
