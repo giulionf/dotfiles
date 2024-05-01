@@ -30,5 +30,6 @@ plugins=(
 source ~/.functions
 source ~/.aliases
 source ~/.env
+source ~/.custom
 
 source $ZSH/oh-my-zsh.sh

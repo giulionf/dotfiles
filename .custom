@@ -1,0 +1,3 @@
+# Custom dotfiles that are not under version control
+# Use the alias addperm to add to this file from the terminal
+# E.g. aliasperm command="echo Test"

@@ -25,3 +25,7 @@ function mkd() {
 function shellymcshellface() {
     echo "git clone git@github.com:giulionf/dotfiles.git"
 }
+
+customadd() {
+    echo "$1 >> ~/.custom"
+}

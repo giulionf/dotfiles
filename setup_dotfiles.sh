@@ -18,6 +18,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~
 # Copy dotfiles to home dir + activate.
 yes | cp -rf .aliases ~/.aliases
 yes | cp -rf .env ~/.env
+yes | cp -rf .custom ~/.custom
 yes | cp -rf .functions ~/.functions
 yes | cp -rf .gitconfig ~/.gitconfig
 yes | cp -rf .p10k.zsh ~/.p10k.zsh
@@ -27,7 +28,6 @@ yes | cp -rf .zshrc ~/.zshrc
 # Copy executables to home dir + give permission.
 mkdir -p ~/bin
 yes | cp -rf ./bin/tmux-cssh ~/bin/tmux-cssh && chmod +x ~/bin/tmux-cssh
-
 
 # Install fzf
 rm -rf ~/.fzf
