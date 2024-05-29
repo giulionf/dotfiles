@@ -292,6 +292,8 @@ defaults write com.apple.terminal StringEncodings -array 4
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
+curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
+
 ###############################################################################
 # Time Machine                                                                #
 ###############################################################################
