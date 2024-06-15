@@ -1,6 +1,8 @@
 # essentials
 brew 'git'
 brew 'git-lfs'
+brew 'neovim'
+brew 'amethyst'
 
 # utils
 brew 'ffmpeg'
@@ -29,7 +31,6 @@ brew 'gh'
 cask 'macpass'
 brew 'cmake'
 brew 'clang-format'
-cask "rectangle"
 brew 'google-chrome'
 brew 'dropbox'
 brew 'spotify'
