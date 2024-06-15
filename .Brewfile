@@ -20,12 +20,6 @@ brew 'vim'
 brew 'tmux'
 brew 'universal-ctags'
 
-tap 'koekeishiya/formulae'
-# brew 'yabai'
-# brew 'skhd'
-#cask 'alacritty'
-cask 'kitty'
-
 # software
 brew 'gh'
 cask 'macpass'
