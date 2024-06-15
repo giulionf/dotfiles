@@ -26,7 +26,7 @@ git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${Z
 # Copy dotfiles to home dir + activate.
 yes | cp -rf .aliases ~/.aliases
 yes | cp -rf .env ~/.env
-yes | cp -rf .custom ~/.custom
+yes | cp -n .custom ~/.custom
 yes | cp -rf .macos ~/.macos
 yes | cp -rf .functions ~/.functions
 yes | cp -rf .gitconfig ~/.gitconfig
