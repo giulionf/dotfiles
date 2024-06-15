@@ -39,7 +39,8 @@
 [help]
 	autocorrect = 1
 [push]
-	default = current # http://stackoverflow.com/a/23918418/89484
+	default = current
+	autoSetupRemote = true
 [user]
 	email = giulio.nf@googlemail.com
 	name = Giulio Neusch-Frediani
