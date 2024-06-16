@@ -1,0 +1,43 @@
+# Focus commands --> CMD + shift
+# Switch focus with Shift + cmd and ',' or '.'
+shift + cmd - 0x2B : yabai -m window --focus prev
+shift + cmd - 0x2F : yabai -m window --focus next
+
+# Control focus with Shift + cmdn and hjkl
+shift + cmd - h : yabai -m window --focus west
+shift + cmd - j : yabai -m window --focus south
+shift + cmd - k : yabai -m window --focus north
+shift + cmd - l : yabai -m window --focus east
+
+
+# Active movement commands --> CMD + alt
+# Swap windows with cmd + alt and ',' or '.'
+cmd + alt - 0x2B : yabai -m window --swap prev
+cmd + alt - 0x2F : yabai -m window --swap next
+
+# Resize windows
+cmd + alt - h : yabai -m window --resize left:-50:0; \
+                yabai -m window --resize right:-50:0
+cmd + alt - j : yabai -m window --resize bottom:0:50; \
+                yabai -m window --resize top:0:50
+cmd + alt - k : yabai -m window --resize top:0:-50; \
+                yabai -m window --resize bottom:0:-50
+cmd + alt - l : yabai -m window --resize right:50:0; \
+                yabai -m window --resize left:50:0
+
+# Move to left half
+cmd + alt - left : yabai -m window --toggle float --grid 2:2:0:0:1:2
+cmd + alt - right : yabai -m window --toggle float --grid 2:2:1:0:1:2
+cmd + alt - down : yabai -m window --toggle float --grid 2:2:0:1:2:1
+cmd + alt - up : yabai -m window --toggle float --grid 2:2:0:0:2:1
+
+
+# Current window full screen with enter
+cmd + alt - 0x24 : yabai -m window --toggle float --grid 1:1:0:0:1:1
+
+# Equalize sizes
+cmd + alt - 0 : yabai -m space --balance
+
+# Float window
+cmd + alt - p : yabai -m window --toggle float; \
+                yabai -m window --toggle border
