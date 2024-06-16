@@ -1,5 +1,1 @@
 # Custom dotfiles that are not under version control
-# Use the alias addperm to add to this file from the terminal
-# E.g. customadd alias hello="echo world"
-# The file will then be written with whatever comes after
-# customadd, in this case 'alias hello="echo world"'
