@@ -3,8 +3,6 @@ export ZSH="$HOME/.oh-my-zsh"
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Running on MacOS
   source ~/.macos
-else
-  # Add non-macos stuff here.
 fi
 
 # Powerlevel 10k custom theme
