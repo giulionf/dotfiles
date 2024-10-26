@@ -1,3 +1,6 @@
+# Clone submodules
+git submodule update --init
+
 # Install Oh My Zsh
 rm -rf ~/.oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -33,6 +36,7 @@ yes | cp -rf .gitconfig ~/.gitconfig
 yes | cp -rf .p10k.zsh ~/.p10k.zsh
 yes | cp -rf .tmux.conf ~/.tmux.conf
 yes | cp -rf .zshrc ~/.zshrc
+yes | cp -rf submodules/tmux-cssh/tmux-cssh ~/bin/
 
 # Copy executables to home dir + give permission.
 mkdir -p ~/bin
