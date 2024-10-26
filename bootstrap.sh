@@ -22,8 +22,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
       read -r answer
       if [[ "$answer" =~ ^[Yy]$ ]]; then
           echo "Aight. Installing yabai + skhd"
-          brew install --cask yabai
-          brew install --cask skhd
+          brew install yabai
+          brew install skhd
           yes | cp -rf .aliases ~/.aliases
           yes | cp -rf .env ~/.env
           echo "yabai --start-service" >> ~/.zshrc
