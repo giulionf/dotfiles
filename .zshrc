@@ -1,4 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
+export PATH="$HOME/bin:$PATH"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Running on MacOS
