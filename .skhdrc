@@ -35,10 +35,10 @@ cmd + alt - down : yabai -m window --toggle float --grid 100:100:1:51:98:48
 cmd + alt - up : yabai -m window --toggle float --grid 100:100:1:1:98:48
 
 # Move spaces
-cmd + alt - + : yabai -m window --display recent --focus
+cmd + alt - i : yabai -m window --display recent --focus
 
 # Focus display
-shift + cmd - + : yabai -m display --focus recent
+shift + cmd - i : yabai -m display --focus recent
 
 # Current window full screen with enter
 cmd + alt - 0x24 : yabai -m window --toggle float --grid 100:100:1:1:98:98
